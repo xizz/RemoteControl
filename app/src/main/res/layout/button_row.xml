@@ -1,0 +1,9 @@
+<TableRow>
+
+	<Button style="@style/RemoteButton"/>
+
+	<Button style="@style/RemoteButton"/>
+
+	<Button style="@style/RemoteButton"/>
+
+</TableRow>

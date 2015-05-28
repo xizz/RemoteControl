@@ -1,13 +1,20 @@
 package xizz.remotecontrol;
 
-import android.app.Activity;
+import android.app.Fragment;
 import android.os.Bundle;
+import android.view.Window;
 
 
-public class RemoteControlActivity extends Activity {
+public class RemoteControlActivity extends SingleFragmentActivity {
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_remote_control);
+	protected Fragment createFragment() {
+		return new RemoteControlFragment();
 	}
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		super.onCreate(savedInstanceState);
+	}
+
 }
